@@ -1,16 +1,16 @@
 import re
 #code
 class amble_petzses3hk():
-    def __init__(self):
+    def __init__(self,mana):
         self.reeee=''
         self.q={}
+        self.mana=int(mana)
         fn=input('put in file read')
         self.fread=open(fn,'r')
         print('provide grounds?')
     def threek_o(self):
         jerp=0
         butt=1
-        ella = 2997
         challick = 0
         abc=0
         d=0
@@ -18,7 +18,7 @@ class amble_petzses3hk():
         for chugga in str(self.fread.readlines()):
             sepia+=str(chugga)
             abc+=1
-            if abc %3000 == 0:
+            if abc % self.mana == 0:
                 d+=1
         d+=1
         for i in sepia:
@@ -28,16 +28,16 @@ class amble_petzses3hk():
                 jerp+=1
                 print(jerp)
                 self.reeee+=str(jerp)+':'+str(d)
-            if challick % ella == 0:
+            if challick % self.mana == 0:
                 jerp+=1
                 self.reeee+=str(jerp)+':'+str(d)
-        
+        self.reeee+=str(d)+':'+str(d)
         print(jerp)
         return
     
     def dio_o(self):
         
-        ella = 3000
+        ella = self.mana
         challick = 0
         jerp=0
         rgxp='[0-9]+:[0-9]+'
@@ -62,7 +62,7 @@ class amble_petzses3hk():
     
 if __name__ == '__main__':
     #run code
-    a = amble_petzses3hk()
+    a = amble_petzses3hk(1900)
     a.threek_o()
     a.dio_o()
     a.fread.close()
